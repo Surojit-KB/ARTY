@@ -14,6 +14,20 @@ Artworks are highly subjective and are open to many interpretations. According t
 ## Technical Architecture
 ![image](https://user-images.githubusercontent.com/22959465/140273186-8e8f10c1-20ce-4d3e-b1dc-84471a4b4afb.png)
 
+## Models
+We trained three different models to cater to three different use cases. The models were based on [Show, Attend and Tell](https://arxiv.org/abs/1502.03044) and provides three model outputs. The first model was trained on the COCO,Flickr 8K and Iconclass datasets, with a focus on everyday real life images, whereas the second and third model was trained on the ArtEmis dataset, with a focus on artwork. The third model was based on [Artemis](https://arxiv.org/abs/2101.07396) which differs from the second in that it undergoes two stages :
+- A ground emotion is predicted by the image to emotion classifier  
+- The predicted emotion is fed into the image to caption generator
+
+This gives the model a more subjective caption as compared to the other two models. 
+
+## Sample Output
+A sample output for a painting
+<img src="arty_painting.gif" alt="App" width="1000"/>
+A sample output for a real life image
+<img src="arty.gif" alt="App" width="1000"/>
+
+Here we can see the difference in outputs. The first model performs quite accurately on a real life image while the second and the third model work quite well on the artwork.
 
 Link to more information - [Arty PDF](https://drive.google.com/file/d/12iQr0c6j_cdHER66uLtFuh2ztAHyjzn1/view?usp=sharing)
 
